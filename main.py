@@ -6,7 +6,7 @@ FINALIZER_NAME = "wrangler.cattle.io/klum-secret"
 
 @click.command()
 @click.option('--context', help='Kubernetes context to use.')
-@click.option('--kubeconfig', default="", help='Path to the kubeconfig file to use.')
+@click.option('--kubeconfig', help='Path to the kubeconfig file to use.')
 def delete_klum_secrets_finalizer(context: str, kubeconfig: str):
     client = kr8s.api(context=context, kubeconfig=kubeconfig)
     namespaces = client.get("namespaces")
