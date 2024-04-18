@@ -4,5 +4,5 @@
 
 ```bash
 pip3 install -r requirements.txt
-python3 main.py --context <context> 
+python3 main.py --context <context> --kubeconfig <kubeconfig>
 ```
